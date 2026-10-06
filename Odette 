@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulation de phishing</title>
+</head>
+<body>
+  <h2>🔐 Simulation de sensibilisation</h2>
+  <p>Attention : ceci est un exercice éducatif. N'utilisez aucune vraie information.</p>
+
+  <form id="demo">
+    <label>Adresse e-mail fictive :</label><br>
+    <input type="email" id="email" placeholder="test@example.com"><br><br>
+
+    <label>Mot de passe fictif :</label><br>
+    <input type="password" id="password"><br><br>
+
+    <button type="submit">Se connecter</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("demo").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      document.getElementById("result").innerHTML =
+        "<h3>✅ Simulation terminée</h3>" +
+        "<p>Aucune donnée n'a été envoyée ni enregistrée.</p>" +
+        "<p>Dans une vraie attaque, ce formulaire pourrait voler vos identifiants.</p>";
+    });
+  </script>
+</body>
+</html>
